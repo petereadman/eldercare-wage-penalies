@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldercare Wage Penalties Research</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Source Serif Pro', serif;
+            background: #f6f6f6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 2px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            max-width: 600px;
+            width: 100%;
+            border-top: 4px solid #2c3e50;
+        }
+        
+        .header {
+            margin-bottom: 24px;
+        }
+        
+        .kicker {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-family: sans-serif;
+        }
+        
+        .headline {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        
+        .subhead {
+            font-size: 16px;
+            color: #333;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        
+        .byline {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .chart-section {
+            margin: 24px 0;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        
+        .chart-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        
+        .chart-subtitle {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .chart {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 12px;
+        }
+        
+        .axis {
+            stroke: #999;
+            stroke-width: 0.5;
+        }
+        
+        .axis-label {
+            font-family: sans-serif;
+            font-size: 10px;
+            fill: #666;
+        }
+        
+        .grid-line {
+            stroke: #e6e6e6;
+            stroke-width: 0.5;
+        }
+        
+        .bar-male {
+            fill: #17a2b8;
+            opacity: 0.9;
+        }
+        
+        .bar-female {
+            fill: #fd7e14;
+            opacity: 0.9;
+        }
+        
+        .source-note {
+            font-size: 10px;
+            color: #999;
+            font-family: sans-serif;
+            text-align: right;
+            margin-top: 8px;
+        }
+        
+        .key-stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 16px;
+            background: #f8f8f8;
+            border-left: 3px solid #2c3e50;
+        }
+        
+        .stat {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-family: sans-serif;
+            margin-top: 4px;
+        }
+        
+        .analysis {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .analysis-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .methodology {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+            padding: 12px;
+            background: #f8f8f8;
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+        
+        .blue-accent {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .paper-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .paper-button {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 2px;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+        
+        .paper-button:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="kicker">Labor Economics</div>
+            <h1 class="headline">Gender differences in eldercare wage penalties</h1>
+            <div class="subhead">Men experience nearly double the wage reduction of women when providing daily eldercare, analysis of 20+ years of time-use data reveals</div>
+            <div class="byline">Research by Peter Readman, Hunter College CUNY</div>
+        </div>
+        
+        <div class="key-stats">
+            <div class="stat">
+                <span class="stat-number">-19.9%</span>
+                <div class="stat-label">Men's daily care penalty</div>
+            </div>
+            <div class="stat">
+                <span class="stat-number">-11%</span>
+                <div class="stat-label">Women's daily care penalty</div>
+            </div>
+            <div class="stat">
+                <span class="stat-number">66,084</span>
+                <div class="stat-label">Participants analyzed</div>
+            </div>
+        </div>
+        
+        <div class="chart-section">
+            <div class="chart-title">Average weekly wages by eldercare frequency and gender</div>
+            <div class="chart-subtitle">Weekly earnings in 2023 dollars, by frequency of eldercare provision</div>
+            
+            <svg class="chart" viewBox="0 0 600 280">
+                <!-- Grid lines -->
+                <line x1="80" y1="40" x2="80" y2="240" class="axis"/>
+                <line x1="80" y1="240" x2="560" y2="240" class="axis"/>
+                
+                <!-- Y-axis grid -->
+                <line x1="80" y1="60" x2="560" y2="60" class="grid-line"/>
+                <line x1="80" y1="100" x2="560" y2="100" class="grid-line"/>
+                <line x1="80" y1="140" x2="560" y2="140" class="grid-line"/>
+                <line x1="80" y1="180" x2="560" y2="180" class="grid-line"/>
+                <line x1="80" y1="220" x2="560" y2="220" class="grid-line"/>
+                
+                <!-- Y-axis labels -->
+                <text x="75" y="245" text-anchor="end" class="axis-label">$0</text>
+                <text x="75" y="225" text-anchor="end" class="axis-label">$500</text>
+                <text x="75" y="185" text-anchor="end" class="axis-label">$1000</text>
+                <text x="75" y="145" text-anchor="end" class="axis-label">$1500</text>
+                <text x="75" y="105" text-anchor="end" class="axis-label">$2000</text>
+                <text x="75" y="65" text-anchor="end" class="axis-label">$2500</text>
+                
+                <!-- Bars representing wage levels by eldercare frequency and gender -->
+                
+                <!-- Daily Care -->
+                <rect x="95" y="100" width="20" height="140" class="bar-male"/>
+                <rect x="117" y="140" width="20" height="100" class="bar-female"/>
+                <text x="117" y="255" text-anchor="middle" class="axis-label">Daily</text>
+                
+                <!-- Several Times/Week -->
+                <rect x="155" y="80" width="20" height="160" class="bar-male"/>
+                <rect x="177" y="120" width="20" height="120" class="bar-female"/>
+                <text x="177" y="255" text-anchor="middle" class="axis-label">Several/Week</text>
+                
+                <!-- Weekly -->
+                <rect x="215" y="70" width="20" height="170" class="bar-male"/>
+                <rect x="237" y="110" width="20" height="130" class="bar-female"/>
+                <text x="237" y="255" text-anchor="middle" class="axis-label">Weekly</text>
+                
+                <!-- Several Times/Month -->
+                <rect x="275" y="65" width="20" height="175" class="bar-male"/>
+                <rect x="297" y="105" width="20" height="135" class="bar-female"/>
+                <text x="297" y="255" text-anchor="middle" class="axis-label">Several/Month</text>
+                
+                <!-- Monthly -->
+                <rect x="335" y="60" width="20" height="180" class="bar-male"/>
+                <rect x="357" y="100" width="20" height="140" class="bar-female"/>
+                <text x="357" y="255" text-anchor="middle" class="axis-label">Monthly</text>
+                
+                <!-- One Time -->
+                <rect x="395" y="55" width="20" height="185" class="bar-male"/>
+                <rect x="417" y="95" width="20" height="145" class="bar-female"/>
+                <text x="417" y="255" text-anchor="middle" class="axis-label">One Time</text>
+                
+                <!-- Other -->
+                <rect x="455" y="65" width="20" height="175" class="bar-male"/>
+                <rect x="477" y="105" width="20" height="135" class="bar-female"/>
+                <text x="477" y="255" text-anchor="middle" class="axis-label">Other</text>
+                
+                <!-- No Care -->
+                <rect x="515" y="75" width="20" height="165" class="bar-male"/>
+                <rect x="537" y="125" width="20" height="115" class="bar-female"/>
+                <text x="537" y="255" text-anchor="middle" class="axis-label">No Care</text>
+                
+                <!-- Legend - moved to avoid overlap -->
+                <rect x="90" y="45" width="12" height="12" class="bar-male"/>
+                <text x="106" y="54" class="axis-label">Male</text>
+                <rect x="140" y="45" width="12" height="12" class="bar-female"/>
+                <text x="156" y="54" class="axis-label">Female</text>
+            </svg>
+            
+            <div class="source-note">Source: American Time Use Survey, 2003–2023</div>
+        </div>
+        
+        <div class="analysis">
+            <div class="analysis-text">
+                This study reveals substantial <span class="blue-accent">gender differences</span> in wage penalties associated with eldercare provision. Using 20+ years of American Time Use Survey data, the research shows men experience nearly double the wage reduction of women when providing daily eldercare, even after controlling for demographics and occupation.
+            </div>
+            
+            <div class="methodology">
+                <strong>Methodology:</strong> OLS regression analysis of 66,084 employed individuals from ATUS 2003-2023. Gender-differentiated wage effects estimated using interaction terms, controlling for age, education, race, region, and occupation. Models explain 43% of wage variation through observable characteristics.
+            </div>
+        </div>
+        
+        <div class="paper-link">
+            <a href="2025_eldercare-time-use.pdf" class="paper-button" target="_blank">View Full Research Paper</a>
+        </div>
+    </div>
+</body>
+</html>
